@@ -5,3 +5,4 @@ export function GastoCombustible(id, vehicleType, date, kilometers, precioViaje)
     this.kilometers = kilometers;
     this.precioViaje = precioViaje;
 }
+

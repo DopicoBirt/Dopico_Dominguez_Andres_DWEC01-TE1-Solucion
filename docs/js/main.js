@@ -14,11 +14,6 @@ console.log("Fichero main.js cargado correctamente");
 
 
 
-
-
-
-
-
 // ----------------------------------------------- (! NO TOCAR ) ------------------------------------------------------
 // let ultimoId = 18; // Último ID de tu lista inicial
 // let segundos = 5;
