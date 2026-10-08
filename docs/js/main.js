@@ -1,6 +1,8 @@
+import { GastoService } from "./service/gasto.service.js";
+
+GastoService.almacenarGastos();
+
 console.log("Fichero main.js cargado correctamente");
-
-
 
 
 
