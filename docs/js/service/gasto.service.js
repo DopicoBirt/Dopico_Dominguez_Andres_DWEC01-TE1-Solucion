@@ -1,4 +1,5 @@
 import { GASTOS_DB } from "../data/gasto.data.js";
+import { GastoCombustible } from "../model/gasto.model.js";
 
 var gastoAnual = {
   2020 : 0,
@@ -26,6 +27,14 @@ function almacenarGastos(){
 }
 
 function procesarGasto(jsonNuevoGasto){
+        const nuevoGasto = JSON.parse(jsonNuevoGasto);
+
+        const gasto = new GastoCombustible(nuevoGasto.id, nuevoGasto.vehicleType, nuevoGasto.date, nuevoGasto.kilometers, nuevoGasto.precioViaje);   
+        const anio = gasto.date.getFullYear();
+        const totalActual = parseFloat(sessionStorage.getItem(anio));
+
+        const totalNuevo = totalActual + gasto.precioViaje;
+            sessionStorage.setItem(anio, totalNuevo);
 
 }
 
@@ -33,3 +42,4 @@ export const GastoService = {
     almacenarGastos,
     procesarGasto
 };
+
